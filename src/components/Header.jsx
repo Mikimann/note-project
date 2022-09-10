@@ -1,9 +1,13 @@
 import React from "react";
+import HighlightOutlinedIcon from "@mui/icons-material/HighlightOutlined";
 
 function Header() {
   return (
     <header>
-      <h1>Keeper</h1>
+      <h1>
+        <HighlightOutlinedIcon />
+        Keeper
+      </h1>
     </header>
   );
 }
