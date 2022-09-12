@@ -1,7 +1,7 @@
 import React from "react";
 import HighlightOutlinedIcon from "@mui/icons-material/HighlightOutlined";
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <h1>
@@ -11,5 +11,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
