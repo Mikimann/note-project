@@ -1,4 +1,5 @@
 import React from "react";
+import "../Header/Header.css";
 import HighlightOutlinedIcon from "@mui/icons-material/HighlightOutlined";
 
 export default function Header() {
