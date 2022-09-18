@@ -1,16 +1,22 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import Fab from "@mui/material/Fab";
 import { Zoom } from "@mui/material";
+import "../CreateArea/CreateArea.css";
 
 const CreateArea = (props) => {
+  const [expanded, setExpanded] = useState(false);
   const [note, setNote] = useState({
     title: "",
     content: "",
   });
 
-  const [expanded, setExpanded] = useState(false);
+  //Use local storage to save note
+
+  useEffect(() => {
+    window.localStorage.setItem("note", JSON.stringify(note));
+  }, [note]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
