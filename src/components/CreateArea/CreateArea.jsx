@@ -7,9 +7,15 @@ import "../CreateArea/CreateArea.css";
 
 const CreateArea = (props) => {
   const [expanded, setExpanded] = useState(false);
-  const [note, setNote] = useState({
-    title: "",
-    content: "",
+  const [note, setNote] = useState(() => {
+    const saved = window.localStorage.getItem("note");
+    const initialValue = JSON.parse(saved);
+    return (
+      initialValue || {
+        title: "",
+        content: "",
+      }
+    );
   });
 
   //Use local storage to save note
