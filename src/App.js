@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header, Footer, Note, CreateArea } from "./components";
 import "./App.css";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  // const [notes, setNotes] = useState(() => {
+  //   const saved = window.localStorage.getItem("note");
+  //   const initialValue = JSON.parse(saved);
+  //   return (
+  //     initialValue || {
+  //       title: "",
+  //       content: "",
+  //     }
+  //   );
+  // });
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -18,6 +28,10 @@ function App() {
       });
     });
   }
+
+  useEffect(() => {
+    window.localStorage.setItem("note", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <div className="App">
