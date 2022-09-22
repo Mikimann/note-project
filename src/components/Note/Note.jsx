@@ -1,7 +1,6 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "../Note/Note.css";
-import { useState, useEffect } from "react";
 
 export default function Note(props) {
   const handleDelete = () => {
