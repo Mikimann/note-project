@@ -1,26 +1,20 @@
 import { useState, useEffect } from "react";
+import { defaultNote } from "../constants/defaultNote";
 
-export const useLocalStorage = () => {
-  const defaultNote = [
-    {
-      title: "Note title",
-      content: "Note content",
-    },
-  ];
-
-  const getNoteValue = () => {
-    const saved = window.localStorage.getItem("note");
-    const savedNote = JSON.parse(saved);
-    return savedNote || defaultNote;
-  };
-
-  const useLocalStorage = () => {
-    const [notes, setNotes] = useState(getNoteValue);
-
-    useEffect(() => {
-      window.localStorage.setItem("note", JSON.stringify(notes));
-    }, [notes]);
-
-    return [notes, setNotes];
-  };
+const getNoteValue = () => {
+  const saved = window.localStorage.getItem("note");
+  const savedNote = JSON.parse(saved);
+  return savedNote || defaultNote;
 };
+
+function useLocalStorage() {
+  const [notes, setNotes] = useState(getNoteValue);
+
+  useEffect(() => {
+    window.localStorage.setItem("note", JSON.stringify(notes));
+  }, [notes]);
+
+  return [notes, setNotes];
+}
+
+export default useLocalStorage;
