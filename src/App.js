@@ -1,33 +1,10 @@
 import { useState, useEffect } from "react";
 import { Header, Footer, Note, CreateArea } from "./components";
-
+import { defaultNote } from "./constants/defaultNote";
+import useLocalStorage from "./hooks/useLocalStorage";
 import "./App.css";
 
-const defaultNote = [
-  {
-    title: "Note title",
-    content: "Note content",
-  },
-];
-
-const getNoteValue = () => {
-  const saved = window.localStorage.getItem("note");
-  const savedNote = JSON.parse(saved);
-  return savedNote || defaultNote;
-};
-
-const useLocalStorage = () => {
-  const [notes, setNotes] = useState(getNoteValue);
-
-  useEffect(() => {
-    window.localStorage.setItem("note", JSON.stringify(notes));
-  }, [notes]);
-
-  return [notes, setNotes];
-};
-
 function App() {
-  // const [notes, setNotes] = useState([]);
   const [notes, setNotes] = useLocalStorage();
 
   function addNote(newNote) {
