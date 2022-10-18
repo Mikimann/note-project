@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Header, Footer, Note, CreateArea } from "./components";
 import { defaultNote } from "./constants/defaultNote";
 import useLocalStorage from "./hooks/useLocalStorage";
