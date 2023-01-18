@@ -24,6 +24,7 @@ const CreateArea = (props) => {
   };
 
   const handleSubmit = (event) => {
+    // eslint-disable-next-line react/prop-types
     props.onAdd(note);
     setNote({
       title: "",
