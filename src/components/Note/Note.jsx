@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "../Note/Note.css";
