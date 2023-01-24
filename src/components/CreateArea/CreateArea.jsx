@@ -50,7 +50,8 @@ const CreateArea = (props) => {
           placeholder="Take a note..."
           rows={expanded ? 3 : 1}
           // eslint-disable-next-line prettier/prettier
-          value={note.content}></textarea>
+          value={note.content}
+        ></textarea>
         <Zoom in={expanded}>
           <Fab onClick={handleSubmit}>
             <AddIcon />
