@@ -1,7 +1,7 @@
-import { Header, Footer, Note, CreateArea } from "../components";
-import { defaultNote } from "../constants/defaultNote";
-import useLocalStorage from "../hooks/useLocalStorage";
-import "./Home.css";
+import { Header, Footer, Note, CreateArea } from '../../components';
+import { defaultNote } from '../../constants/defaultNote';
+import useLocalStorage from '../../hooks/useLocalStorage';
+import './Home.css';
 
 const Home = () => {
   const [notes, setNotes] = useLocalStorage();
