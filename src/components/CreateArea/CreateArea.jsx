@@ -49,7 +49,8 @@ const CreateArea = (props) => {
           onChange={handleChange}
           placeholder="Take a note..."
           rows={expanded ? 3 : 1}
-          value={note.content}></textarea>
+          value={note.content}
+        ></textarea>
         <Zoom in={expanded}>
           <Fab onClick={handleSubmit}>
             <AddIcon />
