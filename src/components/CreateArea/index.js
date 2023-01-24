@@ -1,1 +1,1 @@
-export { default as CreateArea } from "./CreateArea";
+export { default as CreateArea } from './CreateArea';

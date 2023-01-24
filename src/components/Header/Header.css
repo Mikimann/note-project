@@ -7,7 +7,19 @@ header {
 
 header h1 {
   color: #fff;
-  font-family: "McLaren", cursive;
+  font-family: 'McLaren', cursive;
   font-weight: 200;
   margin-left: 30px;
+}
+
+header a {
+  color: #fff;
+  font-family: 'McLaren', cursive;
+  font-weight: 200;
+  font-size: 1.5rem;
+  position: relative;
+  position: absolute;
+  margin-left: 105rem;
+  top: 30px;
+  text-decoration: none;
 }

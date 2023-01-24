@@ -1,15 +1,15 @@
-import React from "react";
-import { useState } from "react";
-import AddIcon from "@mui/icons-material/Add";
-import Fab from "@mui/material/Fab";
-import { Zoom } from "@mui/material";
-import "../CreateArea/CreateArea.css";
+import React from 'react';
+import { useState } from 'react';
+import AddIcon from '@mui/icons-material/Add';
+import Fab from '@mui/material/Fab';
+import { Zoom } from '@mui/material';
+import '../CreateArea/CreateArea.css';
 
 const CreateArea = (props) => {
   const [expanded, setExpanded] = useState(false);
   const [note, setNote] = useState({
-    title: "",
-    content: "",
+    title: '',
+    content: ''
   });
 
   const handleChange = (event) => {
@@ -18,7 +18,7 @@ const CreateArea = (props) => {
     setNote((prevNote) => {
       return {
         ...prevNote,
-        [name]: value,
+        [name]: value
       };
     });
   };
@@ -27,8 +27,8 @@ const CreateArea = (props) => {
     // eslint-disable-next-line react/prop-types
     props.onAdd(note);
     setNote({
-      title: "",
-      content: "",
+      title: '',
+      content: ''
     });
     event.preventDefault();
   };
@@ -41,12 +41,7 @@ const CreateArea = (props) => {
     <div>
       <form className="create-note">
         {expanded ? (
-          <input
-            name="title"
-            onChange={handleChange}
-            value={note.title}
-            placeholder="Title"
-          />
+          <input name="title" onChange={handleChange} value={note.title} placeholder="Title" />
         ) : null}
         <textarea
           name="content"
@@ -54,8 +49,7 @@ const CreateArea = (props) => {
           onChange={handleChange}
           placeholder="Take a note..."
           rows={expanded ? 3 : 1}
-          value={note.content}
-        ></textarea>
+          value={note.content}></textarea>
         <Zoom in={expanded}>
           <Fab onClick={handleSubmit}>
             <AddIcon />
