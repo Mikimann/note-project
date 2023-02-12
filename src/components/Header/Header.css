@@ -23,3 +23,15 @@ header a {
   top: 30px;
   text-decoration: none;
 }
+
+.login {
+  color: #fff;
+  font-family: 'McLaren', cursive;
+  font-weight: 200;
+  font-size: 1.5rem;
+  position: relative;
+  position: absolute;
+  margin-left: 100rem;
+  top: 30px;
+  text-decoration: none;
+}
